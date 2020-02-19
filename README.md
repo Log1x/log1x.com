@@ -4,8 +4,6 @@ The current iteration of my website built with [Nuxt.js](https://github.com/nuxt
 
 Made with love. :heart:
 
-![Screenshot](https://i.imgur.com/1YuKjOx.png)
-
 ## :package:  Requirements
 
 - [Node.js](http://nodejs.org/) >= 8.0.0
