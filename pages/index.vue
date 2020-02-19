@@ -51,11 +51,16 @@
         <div class="col-span-2">
           <span v-for="(item, index) in work" :key="index" class="inline-flex">
             <a
+              v-if="item.url"
               :href="item.url"
               target="_blank"
               class="text-green-400 transition-colors duration-300 ease-in-out hover:text-green-300"
               >{{ item.label }}</a
             >
+
+            <span v-else class="text-green-400 cursor-default">
+              {{ item.label }}
+            </span>
 
             <span
               v-if="index != getIndex(work)"
@@ -121,8 +126,7 @@ export default {
     return {
       work: {
         tendency: {
-          label: 'Tendency',
-          url: '#'
+          label: 'Tendency'
         },
         roots: {
           label: 'Roots',

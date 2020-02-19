@@ -1,6 +1,7 @@
 import Vue from 'vue'
 
-Vue.prototype.$console = () => !process.server &&
+Vue.prototype.$console = () =>
+  !process.server &&
   // eslint-disable-next-line no-console
   console.log(`\n
       LLLLLLLL                      L
