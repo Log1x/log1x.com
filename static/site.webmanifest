@@ -1,0 +1,20 @@
+{
+    "name": "Log1x",
+    "short_name": "Log1x",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#8d1d3f",
+    "background_color": "#8d1d3f",
+    "start_url": "https://log1x.com",
+    "display": "standalone"
+}
