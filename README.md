@@ -2,22 +2,21 @@
 
 The current iteration of my website built with [Nuxt.js](https://github.com/nuxt/nuxt.js). It's a masterpiece.
 
-Made with :heart:
+:heart: Made with love.
 
-## Requirements
+## :package:  Requirements
 
 - [Node.js](http://nodejs.org/) >= 8.0.0
 - [Yarn](https://yarnpkg.com/en/docs/install)
 
-## Usage
+## :tada:  Usage
 
 ```bash
-$ yarn install
-$ yarn run nuxt
-$ yarn run nuxt generate
+$ yarn
+$ yarn nuxt
+$ yarn nuxt generate
 ```
 
-## License
+## :page_facing_up:  License
 
 Log1x.com is provided under the [MIT License](https://github.com/log1x/log1x.com/blob/master/LICENSE.md).
-
