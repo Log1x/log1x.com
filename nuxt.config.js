@@ -10,7 +10,7 @@ export default {
         name: 'description',
         content: 'Brandon Nifong, a full-stack developer and internet marketer.'
       },
-      { property: 'og:image', content: '/logo-thumbnail.png' },
+      { property: 'og:image', content: '/android-chrome-512x512.png' },
       { property: 'og:locale', content: 'en-US' },
       { property: 'og:type', content: 'website' },
       { property: 'og:title', content: 'Brandon Nifong – Log1x' },
@@ -28,7 +28,7 @@ export default {
       },
       { name: 'twitter:url', content: 'https://log1x.com' },
       { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:image', content: '/logo-thumbnail.png' },
+      { name: 'twitter:image', content: '/android-chrome-512x512.png' },
       { name: 'msapplication-TileColor', content: '#8df1d3f' },
       { name: 'theme-color', content: '#8df1d3f' }
     ],
