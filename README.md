@@ -2,7 +2,9 @@
 
 The current iteration of my website built with [Nuxt.js](https://github.com/nuxt/nuxt.js). It's a masterpiece.
 
-:heart: Made with love.
+Made with love. :heart:
+
+![Screenshot](https://i.imgur.com/1YuKjOx.png)
 
 ## :package:  Requirements
 
