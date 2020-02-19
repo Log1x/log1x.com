@@ -5,11 +5,14 @@
 </template>
 
 <script>
-  export default {
-    head: {
+export default {
+  head() {
+    return {
       bodyAttrs: {
-        class: 'text-sm antialiased text-gray-200 bg-black font-fira tracking-wider overflow-hidden leading-relaxed h-screen'
+        class:
+          'text-sm antialiased text-gray-200 bg-black font-fira tracking-wider overflow-hidden leading-relaxed h-screen'
       }
     }
   }
+}
 </script>
