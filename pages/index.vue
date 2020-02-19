@@ -122,7 +122,7 @@ export default {
       work: {
         tendency: {
           label: 'Tendency',
-          url: 'https://tendency.me'
+          url: '#'
         },
         roots: {
           label: 'Roots',
