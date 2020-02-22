@@ -3,15 +3,28 @@
     <nav role="navigation" aria-label="pagination">
       <ul class="flex items-center justify-between">
         <li class="lg:w-1/5">
-          <g-link :to="previousPage(info.currentPage)" :class="{'pointer-events-none opacity-0': info.currentPage == 1}" :rel="info.currentPage == 1 ? 'nofollow' : 'prev'">
+          <g-link
+            :to="previousPage(info.currentPage)"
+            :class="{ 'pointer-events-none opacity-0': info.currentPage == 1 }"
+            :rel="info.currentPage == 1 ? 'nofollow' : 'prev'"
+          >
             &larr; Previous
           </g-link>
         </li>
 
-        <li class="hidden">Page {{ info.currentPage }} of {{ info.totalPages }}</li>
+        <li class="hidden">
+          Page {{ info.currentPage }} of {{ info.totalPages }}
+        </li>
 
         <li>
-          <g-link :to="nextPage(info.currentPage,info.totalPages)" :class="{'pointer-events-none opacity-0': info.currentPage == info.totalPages}" :rel="info.currentPage == info.totalPages ? 'nofollow' : 'next'">
+          <g-link
+            :to="nextPage(info.currentPage, info.totalPages)"
+            :class="{
+              'pointer-events-none opacity-0':
+                info.currentPage == info.totalPages
+            }"
+            :rel="info.currentPage == info.totalPages ? 'nofollow' : 'next'"
+          >
             Next &rarr;
           </g-link>
         </li>
@@ -22,18 +35,23 @@
 
 <script>
 export default {
-  props: ['base','info'],
+  props: ['base', 'info'],
   methods: {
     previousPage(currentPage) {
-      return [0, 1].includes(currentPage - 1) ? `${this.basePath}/` : `${this.basePath}/${currentPage - 1}/`;
+      return [0, 1].includes(currentPage - 1)
+        ? `${this.basePath}/`
+        : `${this.basePath}/${currentPage - 1}/`
     },
+
     nextPage(currentPage, totalPages) {
-      return totalPages > currentPage ? `${this.basePath}/${currentPage + 1}/` : `${this.basePath}/${currentPage}/`;
+      return totalPages > currentPage
+        ? `${this.basePath}/${currentPage + 1}/`
+        : `${this.basePath}/${currentPage}/`
     }
   },
   computed: {
     basePath() {
-      return this.base || ''
+      return 'blog'
     }
   }
 }

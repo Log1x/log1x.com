@@ -12,11 +12,10 @@
 
 <script>
 export default {
-  metaInfo () {
+  metaInfo() {
     return {
-      title: `404 – Page Not Found`,
+      title: `404 – Page Not Found`
     }
-  },
+  }
 }
 </script>
-

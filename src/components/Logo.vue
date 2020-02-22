@@ -1,5 +1,5 @@
 <template>
-  <h1 class="flex items-center self-start mb-6 cursor-default group">
+  <div class="flex items-center self-start mb-6 cursor-default group">
     <div
       class="pl-px mr-3 -mt-1 -ml-1 text-brand-500 group-hover:text-brand-600"
     >
@@ -34,7 +34,7 @@
         >@log1x</a
       >
     </div>
-  </h1>
+  </div>
 </template>
 
 <script>

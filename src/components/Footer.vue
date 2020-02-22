@@ -1,7 +1,7 @@
 <template>
   <footer>
     <a
-      class="inline-flex items-center mt-4 ml-6 group"
+      class="inline-flex items-center mt-4 group"
       target="_blank"
       href="https://github.com/sponsors/Log1x"
     >
@@ -29,8 +29,7 @@
 </template>
 
 <script>
-
 export default {
-  name: 'Footer',
+  name: 'Footer'
 }
 </script>

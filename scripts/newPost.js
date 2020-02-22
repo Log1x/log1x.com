@@ -6,22 +6,27 @@ const title = process.argv[2]
 const blogdir = './content/posts'
 const postDate = moment().format('YYYY-MM-DD HH:mm:ss')
 
-if (!title) {
-  console.log('❌  Please specify a post title.')
-  return
+const newPost = () => {
+  if (!title) {
+    return console.log('❌  Please specify a post title.')
+  }
+
+  const basename = `${moment().format('YYYY-MM-DD')}-${slugify(title)}`
+
+  const contents = `---
+  title: "${title}"
+  slug:
+  description: ""
+  date: ${postDate}
+  author: bleda-gridsome
+  tags:
+  thumbnail:
+  ---
+  `
+
+  fs.writeFile(`${blogdir}/${basename}.md`, contents, () =>
+    console.log(`✔ Created ${blogdir}/${basename}.md`)
+  )
 }
 
-const basename = `${moment().format('YYYY-MM-DD')}-${slugify(title)}`
-
-const contents = `---
-title: "${title}"
-slug:
-description: ""
-date: ${postDate}
-author: bleda-gridsome
-tags:
-thumbnail:
----
-`
-
-fs.writeFile(`${blogdir}/${basename}.md`, contents, () => console.log(`✔ Created ${blogdir}/${basename}.md`))
+module.exports = newPost()

@@ -1,11 +1,19 @@
 <template>
-  <div class="p-4 mb-12 leading-normal" role="alert">
-    <slot>This is an alert, you should probably pass it some text...</slot>
+  <div class="leading-normal shadow" role="alert">
+    <div class="flex items-center px-8 py-4 -mx-4">
+      <div class="px-4 text-xl">
+        <i :class="`fa-${icon || 'exclamation-triangle'}`" class="fas"></i>
+      </div>
+
+      <div class="px-4">
+        <slot />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Alert',
+  name: 'Alert'
 }
 </script>

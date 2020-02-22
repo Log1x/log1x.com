@@ -1,19 +1,9 @@
 module.exports = {
   siteName: 'Log1x',
-  siteDescription: "Brandon Nifong",
+  siteDescription: 'Brandon Nifong',
   siteUrl: 'https://log1x.com',
   titleTemplate: `%s | Log1x`,
   icon: '/favicon-32x32.png',
-
-  transformers: {
-    remark: {
-      externalLinksTarget: '_blank',
-      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      plugins: [
-        ['gridsome-plugin-remark-shiki', { theme: 'Material-Theme-Darker' }]
-      ]
-    }
-  },
 
   plugins: [
     { use: 'gridsome-plugin-tailwindcss' },
@@ -25,44 +15,36 @@ module.exports = {
         refs: {
           tags: {
             typeName: 'Tag',
-            create: true,
-          },
-        },
-      },
+            create: true
+          }
+        }
+      }
     },
     {
       use: '@gridsome/plugin-google-analytics',
-      options: { id: 'UA-40315702-1' },
+      options: { id: 'UA-40315702-1' }
     },
     {
       use: '@gridsome/plugin-sitemap',
-      options: { cacheTime: 600000 },
-    },
-    {
-      use: 'gridsome-plugin-rss',
-      options: {
-        contentTypeName: 'Post',
-        feedOptions: {
-          title: 'Log1x',
-          feed_url: 'https://log1x/feed.xml',
-          site_url: 'https://log1x.com',
-        },
-        feedItemOptions: node => ({
-          title: node.title,
-          description: node.description,
-          url: 'https://log1x.com' + node.path,
-          author: node.author,
-          date: node.date,
-        }),
-        output: {
-          dir: './static',
-          name: 'feed.xml',
-        },
-      },
-    },
+      options: { cacheTime: 600000 }
+    }
   ],
-
   templates: {
-    Post: '/:title',
+    Post: '/:title'
   },
+  transformers: {
+    remark: {
+      plugins: [
+        [
+          'gridsome-plugin-remark-shiki',
+          {
+            theme: 'Material-Theme-Darker',
+            skipInline: true
+          }
+        ]
+      ],
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer']
+    }
+  }
 }
