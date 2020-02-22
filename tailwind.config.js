@@ -26,12 +26,21 @@ module.exports = {
           900: '#2a0913'
         }
       },
+      listStyleType: {
+        none: 'none',
+        circle: 'circle',
+        square: 'square',
+      },
       fontFamily: {
         fira: ['Fira Code', 'monospace']
       },
       transitionProperty: {
         visibility: 'visibility',
         width: 'width'
+      },
+      fontSize: {
+        '2xs': '0.675rem',
+        md: '0.9rem',
       },
       spacing: {
         '2px': '2px',
